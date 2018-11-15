@@ -1,11 +1,24 @@
 {
-  "name": "ffp-finances",
+  "name": "@ffp/finances",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.4.0",
+    "@material-ui/icons": "^3.0.1",
+    "firebase": "^5.5.8",
+    "ra-auth-firebase": "^1.0.2",
+    "re-base": "^4.0.0",
     "react": "^16.6.1",
+    "react-admin": "^2.4.1",
+    "react-admin-firebase": "^0.2.8",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-saga": "^0.16.2",
+    "redux-saga-firebase": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +34,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@firebase/app-types": "^0.3.2",
+    "prop-types": "^15.6.2"
+  }
 }
