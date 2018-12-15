@@ -1,5 +1,5 @@
 import {put, takeLatest} from 'redux-saga/effects';
-import {facebookAuthProvider, fireAuth, fireDb} from '../firebase';
+import {facebookAuthProvider, fireAuth, firestore} from '../firebase';
 import {UserException} from '../errors';
 
 import {
@@ -67,7 +67,7 @@ function* userUpdateFromFacebookSaga({additionalUserInfo, uid}) {
     } = additionalUserInfo.profile;
     const profile = {email, firstName, lastName, facebookId, midName, fullName};
     // Update the user data
-    yield fireDb.collection(FIRESTORE_KEY).doc(uid).set(profile, {merge: true});
+    yield firestore.collection(FIRESTORE_KEY).doc(uid).set(profile, {merge: true});
     // Update Successful
     yield put(userUpdateFromFbSuccess());
     yield put(userSetProfile(profile));
@@ -83,7 +83,7 @@ function* userUpdateFromFacebookSaga({additionalUserInfo, uid}) {
  */
 function* userGetProfileSaga({uid}) {
   try {
-    const profile = yield fireDb.collection(FIRESTORE_KEY).doc(uid).get()
+    const profile = yield firestore.collection(FIRESTORE_KEY).doc(uid).get()
       .then(doc => {
         if (!doc.exists) { // Make sure the user exists
           throw new UserException('No user associated to that uid');

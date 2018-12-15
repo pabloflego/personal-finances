@@ -7,7 +7,7 @@ import * as serviceWorker from './shared/serviceWorker';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import App from './components/App';
-import Admin from './components/Admin';
+// import Admin from './components/Admin';
 import './index.css';
 
 render((
@@ -15,7 +15,7 @@ render((
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route path='/admin' component={Admin}/>
+          {/*<Route path='/admin' component={Admin}/>*/}
           <Route path='/' component={App}/>
         </Switch>
       </BrowserRouter>
