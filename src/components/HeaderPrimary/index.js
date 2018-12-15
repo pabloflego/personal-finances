@@ -11,9 +11,10 @@ import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import SearchIcon from '@material-ui/icons/Search';
 // import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import InputBase from '@material-ui/core/InputBase';
 import {fireAuth} from '../../shared/firebase';
 import {userAuthenticate} from '../../shared/reducers/user';
 
@@ -120,10 +121,6 @@ class HeaderPrimary extends React.Component {
     this.setState({redirect: true});
   });
 
-  test = () => {
-    this.props.userAuthenticate();
-  };
-
   render() {
     const {anchorEl, mobileMoreAnchorEl} = this.state;
     const {classes} = this.props;
@@ -138,8 +135,8 @@ class HeaderPrimary extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        {/*<MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>*/}
-        {/*<MenuItem onClick={this.handleMenuClose}>My account</MenuItem>*/}
+        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
         <MenuItem onClick={this.logOut}>Log Out</MenuItem>
       </Menu>
     );
@@ -152,22 +149,6 @@ class HeaderPrimary extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
-        {/*<MenuItem>*/}
-        {/*<IconButton color="inherit">*/}
-        {/*<Badge badgeContent={4} color="secondary">*/}
-        {/*<MailIcon />*/}
-        {/*</Badge>*/}
-        {/*</IconButton>*/}
-        {/*<p>Messages</p>*/}
-        {/*</MenuItem>*/}
-        {/*<MenuItem>*/}
-        {/*<IconButton color="inherit">*/}
-        {/*<Badge badgeContent={11} color="secondary">*/}
-        {/*<NotificationsIcon />*/}
-        {/*</Badge>*/}
-        {/*</IconButton>*/}
-        {/*<p>Notifications</p>*/}
-        {/*</MenuItem>*/}
         <MenuItem onClick={this.handleProfileMenuOpen}>
           <IconButton color="inherit">
             <AccountCircle/>
@@ -187,31 +168,20 @@ class HeaderPrimary extends React.Component {
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               FFP Personal Finances
             </Typography>
-            {/*<div className={classes.search}>*/}
-            {/*<div className={classes.searchIcon}>*/}
-            {/*<SearchIcon/>*/}
-            {/*</div>*/}
-            {/*<InputBase*/}
-            {/*placeholder="Search…"*/}
-            {/*classes={{*/}
-            {/*root: classes.inputRoot,*/}
-            {/*input: classes.inputInput,*/}
-            {/*}}*/}
-            {/*/>*/}
-            {/*</div>*/}
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon/>
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+              />
+            </div>
             <div className={classes.grow}/>
             <div className={classes.sectionDesktop}>
-              {/*<IconButton color="inherit">*/}
-              {/*<Badge badgeContent={4} color="secondary">*/}
-              {/*<MailIcon />*/}
-              {/*</Badge>*/}
-              {/*</IconButton>*/}
-              <IconButton
-                color="inherit"
-                onClick={this.test}
-              >
-                <NotificationsIcon/>
-              </IconButton>
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
