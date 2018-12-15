@@ -722,6 +722,40 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@devexpress/dx-core@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-core/-/dx-core-1.9.1.tgz#959217c3f5915b97a2e56e6018a98b8aa4874f7e"
+  integrity sha512-62TgDbO4CE6ItABNdtOwH2nhR1Cx0D+vigkZzWMgypOfQ1V005vrDAJa7n9wbtTBvhVWpCjG28XRk8jy2IlbDQ==
+
+"@devexpress/dx-grid-core@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-grid-core/-/dx-grid-core-1.9.1.tgz#7ff8d8bead921395c7d7dd003c08e7b14de1e0d6"
+  integrity sha512-APfsL6kvbwYBpz5PS1w3ZIkUlf4651AzDMZy11d6hUJ8PcKsZS1yRUeFza2ZiPng9hrBJiPWb0Kivr+EI1a5Tw==
+
+"@devexpress/dx-react-core@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-react-core/-/dx-react-core-1.9.1.tgz#533dbfdd583bae5a4492d2511a1cc6cf6555d50f"
+  integrity sha512-+kisvzVkkv8ebaXWCnS3zyRqvYmXcQwjnP/DXoqVRLTZM2VA653Ut39wuILHYoZQcUm15XN+nS/X4yANNqVvqQ==
+  dependencies:
+    "@devexpress/dx-core" "^1.9.1"
+    prop-types "^15.6.2"
+
+"@devexpress/dx-react-grid-material-ui@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-react-grid-material-ui/-/dx-react-grid-material-ui-1.9.1.tgz#6e0b9d6433422b483bff3d4c4f1f4d46bac262ce"
+  integrity sha512-mKek5OkfH57T0/jzZVtCZsshUSaDwZzTG030exWF0tn2TDpAKtYdiJ54gbWavzilS/1s0RhOpP26NcQ+TNaK/w==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.6.2"
+
+"@devexpress/dx-react-grid@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-react-grid/-/dx-react-grid-1.9.1.tgz#0e088c498e6fd3ba439cfdb13d291a4daa6a3787"
+  integrity sha512-Ujuu7ATeZBwpXLLPdelCFLanMUomcf6USSPXVebcZS060VujFHKEJdSgXUoxX+ZtMUoDvLONvVjLW4lfXUoHng==
+  dependencies:
+    "@devexpress/dx-grid-core" "^1.9.1"
+    prop-types "^15.6.2"
+
 "@firebase/app-types@0.3.2", "@firebase/app-types@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.3.2.tgz#a92dc544290e2893bd8c02a81e684dae3d8e7c85"
@@ -2105,7 +2139,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@~2.2.5:
+classnames@^2.2.5, classnames@^2.2.6, classnames@~2.2.5:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
